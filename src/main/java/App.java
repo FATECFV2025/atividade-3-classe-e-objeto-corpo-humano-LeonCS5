@@ -27,8 +27,8 @@ public class App {
         //c1.massa = "2";
         //erro, erro de syntaxe por causa da ausencia do set e por tentar colocar numero como string
         //massa e volume
-        c1.setAltura(1.80);
-        c1.setMassa(80);
+        c1.setAltura(1.63);
+        c1.setMassa(65);
         c1.setVolume(10);
 
         System.out.println("Densidade: " + c1.getDensidade());

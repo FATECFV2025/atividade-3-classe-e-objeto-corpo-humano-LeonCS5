@@ -27,7 +27,7 @@ public class CorpoHumano {
         this.volume = volume != 0 ? volume : 1;//evita dividir por 0
         this.densidade = this.massa / this.volume;
         this.altura = altura != 0 ? altura: 1;//evita dividir por 0
-        this.IMC = 0;
+        this.IMC = this.massa / (this.altura * this.altura);
     }
     
     //Getters
@@ -61,6 +61,9 @@ public class CorpoHumano {
         this.altura = altura;
         atualizarIMC();
     }
+    public void setDensidade(double densidade) {
+        this.densidade = densidade;
+    }
 
     //Calcular Densidade
     private void atualizarDensidade(){
@@ -72,3 +75,9 @@ public class CorpoHumano {
     }
 
 }
+//Na classe Corpo_Humano inclua a linha c1.massa = "2"; logo depois de instanciar o objeto c1. Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+//erro, erro de syntaxe por causa da ausencia do set e por tentar colocar numero como string.
+//Na classe Corpo_Humano altere a linha private float Massa para public float Massa; Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+//permitiu que os atributos sejam acessados diretamente fora da clases. Fazer isso remove a proteção da váriavel.
+//Na classe Corpo_Humano altere a linha public setVolume (float volume) para private setVolume (float volume).Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+//Fez com que o metodo ficasse inacessível fora da classe. Tornar o método privado restringe o uso dentro da própria classe.
